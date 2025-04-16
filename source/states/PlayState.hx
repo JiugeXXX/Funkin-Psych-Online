@@ -4397,11 +4397,7 @@ class PlayState extends MusicBeatState
 		strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
 		note.hitByOpponent = true;
 
-<<<<<<< HEAD
 		var compat:String = note.mustPress ? 'goodNoteHit' : 'opponentNoteHit';
-=======
-		var compat:String = note.mustPress && !opponentMode ? 'goodNoteHit' : 'opponentNoteHit';
->>>>>>> 2d73ac180eba81de26b26b4a00fd699222da05e1
 		var result:Dynamic = callOnLuas(compat, [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != FunkinLua.Function_Stop && result != FunkinLua.Function_StopHScript && result != FunkinLua.Function_StopAll) callOnHScript(compat, [note]);
 
